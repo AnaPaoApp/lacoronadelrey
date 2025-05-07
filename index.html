@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La corona del rey</title>
+  <link rel="manifest" href="manifest.json" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input { margin-bottom: 10px; display: block; }
+  </style>
+</head>
+<body>
+  <h1>La corona del rey</h1>
+  <p>Calcula la densidad del objeto:</p>
+  <label>Masa (g): <input type="number" id="masa"></label>
+  <label>Volumen (cm³): <input type="number" id="volumen"></label>
+  <button onclick="calcular()">Calcular Densidad</button>
+  <p id="resultado"></p>
+  <script src="script.js"></script>
+</body>
+</html>
